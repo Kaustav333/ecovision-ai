@@ -20,6 +20,11 @@
     "recharts": "^3.10.1",
     "tailwindcss": "^4.3.5"
   },
+  "overrides": {
+    "@teachablemachine/image": {
+      "@tensorflow/tfjs": "$@tensorflow/tfjs"
+    }
+  },
   "devDependencies": {
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
