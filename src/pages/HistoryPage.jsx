@@ -8,14 +8,14 @@ export default function HistoryPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 p-6 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-start gap-3.5">
           <div className="w-12 h-12 bg-emerald-100 border border-emerald-200 rounded-2xl flex items-center justify-center shrink-0">
-            <History className="w-6 h-6 text-emerald-700" />
+            <History className="w-6 h-6 text-[#14532D]" />
           </div>
           <div>
-            <h1 className="text-3xl font-extrabold text-slate-900">Classification History</h1>
-            <p className="text-slate-600 text-sm sm:text-base mt-1">
+            <h1 className="text-3xl font-extrabold text-[#0A3622]">Classification History</h1>
+            <p className="text-[#1E4730] text-sm sm:text-base mt-1">
               Review past AI classifications, filter by category, and update disposal status.
             </p>
           </div>
@@ -33,7 +33,7 @@ export default function HistoryPage() {
                 clearData();
               }
             }}
-            className="inline-flex items-center gap-1.5 text-sm text-red-600 hover:text-red-700 font-semibold px-4 py-2 rounded-xl border border-red-200 hover:bg-red-50 transition-colors self-start"
+            className="inline-flex items-center gap-1.5 text-sm text-red-700 hover:text-red-800 font-semibold px-4 py-2 rounded-xl border border-red-200 bg-white/80 hover:bg-red-50 transition-colors self-start"
           >
             <Trash2 className="w-4 h-4" />
             Clear All History
@@ -48,7 +48,7 @@ export default function HistoryPage() {
       />
 
       {/* Privacy Notice */}
-      <div className="bg-emerald-50/70 border border-emerald-100 rounded-2xl p-4 flex items-center justify-center gap-2 text-xs text-emerald-900">
+      <div className="eco-glass border border-emerald-200/80 rounded-2xl p-4 flex items-center justify-center gap-2 text-xs text-[#14532D]">
         <Lock className="w-4 h-4 text-emerald-700 shrink-0" />
         <span>
           Privacy Guarantee: Classification thumbnails and timestamps are stored only inside your browser&rsquo;s{" "}

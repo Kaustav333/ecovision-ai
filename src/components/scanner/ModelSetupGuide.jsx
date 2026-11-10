@@ -13,7 +13,7 @@ export default function ModelSetupGuide({ onConnectUrl, isLoading, errorMessage 
   return (
     <div className="max-w-3xl mx-auto space-y-6 animate-fade-in">
       {/* Main Unconfigured Notice */}
-      <div className="bg-white border-2 border-amber-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+      <div className="eco-glass border-2 border-amber-300/90 rounded-3xl p-6 sm:p-8 shadow-sm">
         <div className="flex items-start gap-3.5 pb-5 border-b border-amber-100">
           <div className="w-11 h-11 rounded-2xl bg-amber-100 flex items-center justify-center shrink-0">
             <AlertTriangle className="w-6 h-6 text-amber-700" />

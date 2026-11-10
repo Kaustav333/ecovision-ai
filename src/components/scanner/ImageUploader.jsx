@@ -124,9 +124,9 @@ export default function ImageUploader({ onImageReady, isProcessing }) {
   };
 
   return (
-    <div className="bg-white rounded-3xl border border-emerald-100 shadow-sm p-6 sm:p-8 space-y-6">
+    <div className="eco-glass rounded-3xl border border-emerald-200/80 shadow-sm p-6 sm:p-8 space-y-6">
       {/* Mode Switcher */}
-      <div className="flex items-center justify-center gap-2 bg-emerald-50 border border-emerald-100 rounded-2xl p-1.5 max-w-sm mx-auto">
+      <div className="flex items-center justify-center gap-2 bg-emerald-100/70 border border-emerald-200 rounded-2xl p-1.5 max-w-sm mx-auto">
         <button
           type="button"
           onClick={() => {
@@ -136,8 +136,8 @@ export default function ImageUploader({ onImageReady, isProcessing }) {
           }}
           className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
             mode === "upload"
-              ? "bg-emerald-900 text-white shadow-xs"
-              : "text-emerald-900/70 hover:text-emerald-950"
+              ? "bg-[#14532D] text-white shadow-xs"
+              : "text-[#14532D]/75 hover:text-[#0A3622]"
           }`}
         >
           <Upload className="w-4 h-4" />
@@ -151,8 +151,8 @@ export default function ImageUploader({ onImageReady, isProcessing }) {
           }}
           className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
             mode === "webcam"
-              ? "bg-emerald-900 text-white shadow-xs"
-              : "text-emerald-900/70 hover:text-emerald-950"
+              ? "bg-[#14532D] text-white shadow-xs"
+              : "text-[#14532D]/75 hover:text-[#0A3622]"
           }`}
         >
           <Camera className="w-4 h-4" />

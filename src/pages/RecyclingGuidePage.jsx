@@ -21,7 +21,7 @@ import WASTE_INFO from "../data/wasteInfo";
 function ExpandableSection({ title, icon: Icon, children, defaultOpen = false }) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   return (
-    <div className="bg-white rounded-2xl border border-emerald-100 shadow-2xs overflow-hidden">
+    <div className="eco-glass rounded-2xl border border-emerald-200/80 shadow-2xs overflow-hidden">
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
@@ -89,20 +89,20 @@ export default function RecyclingGuidePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       {/* Header */}
-      <div className="text-center max-w-2xl mx-auto">
-        <div className="w-14 h-14 bg-emerald-100 border border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
-          <BookOpen className="w-7 h-7 text-emerald-700" />
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 px-6 py-7 text-center max-w-2xl mx-auto shadow-xs">
+        <div className="w-14 h-14 bg-emerald-100 border border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-3">
+          <BookOpen className="w-7 h-7 text-[#14532D]" />
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0A3622]">
           Eco Awareness &amp; Recycling Guide
         </h1>
-        <p className="text-slate-600 mt-2 text-sm sm:text-base">
+        <p className="text-[#1E4730] mt-2 text-sm sm:text-base">
           Learn why segregation matters, how wet and dry waste differ, and practical habits for everyday sustainability.
         </p>
       </div>
 
       {/* Interactive "Did You Know?" Environmental Facts Deck */}
-      <div className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-green-800 rounded-3xl p-6 sm:p-8 text-white shadow-lg">
+      <div className="bg-gradient-to-br from-[#0B3521]/95 via-[#14532D]/95 to-[#228B3B]/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 text-white shadow-lg border border-emerald-700/50">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
           <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400/30 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-emerald-200 self-start">
             <Lightbulb className="w-4 h-4 text-amber-300" />
@@ -146,7 +146,7 @@ export default function RecyclingGuidePage() {
       </div>
 
       {/* 4 Waste Categories Quick Reference */}
-      <div className="bg-white rounded-3xl border border-emerald-100 p-6 shadow-xs">
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 p-6 shadow-xs">
         <h2 className="text-lg font-bold text-slate-900 mb-4">
           4-Category Smart Segregation Reference
         </h2>

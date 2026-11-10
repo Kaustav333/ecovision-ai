@@ -45,7 +45,7 @@ export default function ClassificationResult({
       )}
 
       {/* Main Classification & Smart Recommendation Card */}
-      <div className="bg-white rounded-3xl border border-emerald-100 shadow-lg overflow-hidden">
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 shadow-lg overflow-hidden">
         {/* Prediction Summary Header */}
         <div className="p-6 sm:p-8">
           <div className="flex flex-col md:flex-row gap-6">
@@ -181,7 +181,7 @@ export default function ClassificationResult({
       </div>
 
       {/* Interactive Disposal Confirmation & Model Verification Bar */}
-      <div className="bg-white rounded-2xl border border-emerald-100 p-5 shadow-xs flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+      <div className="eco-glass rounded-2xl border border-emerald-200/80 p-5 shadow-xs flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-3">
           {savedEntry && (
             <button

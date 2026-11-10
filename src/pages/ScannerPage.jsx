@@ -70,21 +70,21 @@ export default function ScannerPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       {/* Page Header */}
-      <div className="text-center max-w-2xl mx-auto">
-        <div className="w-14 h-14 bg-emerald-100 border border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
-          <ScanLine className="w-7 h-7 text-emerald-700" />
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 px-6 py-7 text-center max-w-2xl mx-auto shadow-xs">
+        <div className="w-14 h-14 bg-emerald-100 border border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-3">
+          <ScanLine className="w-7 h-7 text-[#14532D]" />
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0A3622]">
           AI Waste Scanner
         </h1>
-        <p className="text-slate-600 mt-2 text-sm sm:text-base">
+        <p className="text-[#1E4730] mt-2 text-sm sm:text-base">
           Upload a photo or capture from your webcam to classify waste using Google Teachable Machine and TensorFlow.js.
         </p>
       </div>
 
       {/* Connected Model Status Pill */}
       {isConfigured && (
-        <div className="flex flex-wrap items-center justify-between gap-3 bg-white border border-emerald-100 rounded-2xl px-4 py-3 text-xs sm:text-sm shadow-2xs">
+        <div className="flex flex-wrap items-center justify-between gap-3 eco-glass border border-emerald-200/80 rounded-2xl px-4 py-3 text-xs sm:text-sm shadow-2xs">
           <div className="flex items-center gap-2 min-w-0">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
             <span className="font-semibold text-slate-800">

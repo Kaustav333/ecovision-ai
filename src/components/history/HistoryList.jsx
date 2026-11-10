@@ -34,17 +34,17 @@ export default function HistoryList({ history, onToggleDisposed, onDeleteEntry }
 
   if (history.length === 0) {
     return (
-      <div className="bg-white rounded-3xl border border-emerald-100 p-12 text-center shadow-xs">
-        <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
-          <Clock className="w-8 h-8 text-emerald-600" />
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 p-12 text-center shadow-xs">
+        <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <Clock className="w-8 h-8 text-[#14532D]" />
         </div>
-        <h3 className="text-lg font-bold text-slate-900">No Classification History Yet</h3>
-        <p className="text-sm text-slate-500 mt-1 max-w-md mx-auto">
+        <h3 className="text-lg font-bold text-[#0A3622]">No Classification History Yet</h3>
+        <p className="text-sm text-[#1E4730]/80 mt-1 max-w-md mx-auto">
           Your classified waste thumbnails, confidence scores, and disposal confirmations will appear here automatically after scanning.
         </p>
         <Link
           to="/scanner"
-          className="mt-6 inline-flex items-center gap-2 bg-emerald-800 hover:bg-emerald-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors"
+          className="mt-6 inline-flex items-center gap-2 bg-[#14532D] hover:bg-[#0F3F22] text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors"
         >
           <ScanLine className="w-4 h-4" />
           Go to AI Waste Scanner
@@ -56,9 +56,9 @@ export default function HistoryList({ history, onToggleDisposed, onDeleteEntry }
   return (
     <div className="space-y-6">
       {/* Filter Toolbar */}
-      <div className="bg-white rounded-2xl border border-emerald-100 p-4 shadow-2xs space-y-3">
+      <div className="eco-glass rounded-2xl border border-emerald-200/80 p-4 shadow-2xs space-y-3">
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 uppercase tracking-wider mr-1">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#1E4730] uppercase tracking-wider mr-1">
             <Filter className="w-3.5 h-3.5" />
             Category:
           </span>
@@ -69,8 +69,8 @@ export default function HistoryList({ history, onToggleDisposed, onDeleteEntry }
               onClick={() => setCategoryFilter(opt)}
               className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                 categoryFilter === opt
-                  ? "bg-emerald-900 text-white shadow-2xs"
-                  : "bg-emerald-50/70 text-slate-600 hover:bg-emerald-100 hover:text-emerald-900"
+                  ? "bg-[#14532D] text-white shadow-2xs"
+                  : "bg-emerald-100/70 text-[#173E28] hover:bg-emerald-200/80"
               }`}
             >
               {opt}
@@ -78,8 +78,8 @@ export default function HistoryList({ history, onToggleDisposed, onDeleteEntry }
           ))}
         </div>
 
-        <div className="flex items-center gap-2 flex-wrap pt-2 border-t border-slate-100">
-          <span className="text-xs font-bold text-slate-500 uppercase tracking-wider mr-1">
+        <div className="flex items-center gap-2 flex-wrap pt-2 border-t border-emerald-100">
+          <span className="text-xs font-bold text-[#1E4730] uppercase tracking-wider mr-1">
             Status:
           </span>
           {STATUS_FILTERS.map((status) => (
@@ -89,8 +89,8 @@ export default function HistoryList({ history, onToggleDisposed, onDeleteEntry }
               onClick={() => setStatusFilter(status.key)}
               className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
                 statusFilter === status.key
-                  ? "bg-emerald-700 text-white"
-                  : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                  ? "bg-[#228B3B] text-white"
+                  : "bg-white/80 text-[#173E28] hover:bg-emerald-100/70 border border-emerald-200/60"
               }`}
             >
               {status.label}
@@ -106,7 +106,7 @@ export default function HistoryList({ history, onToggleDisposed, onDeleteEntry }
           return (
             <div
               key={item.id}
-              className="bg-white rounded-2xl border border-emerald-100 p-4 flex flex-col sm:flex-row sm:items-center gap-4 shadow-2xs hover:shadow-md transition-shadow"
+              className="eco-glass rounded-2xl border border-emerald-200/80 p-4 flex flex-col sm:flex-row sm:items-center gap-4 shadow-2xs hover:shadow-md transition-shadow"
             >
               {/* Thumbnail */}
               <div className="flex items-center gap-4 flex-1 min-w-0">

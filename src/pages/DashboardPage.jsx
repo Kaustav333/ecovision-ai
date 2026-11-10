@@ -22,23 +22,23 @@ export default function DashboardPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 p-6 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-xs font-bold mb-3">
+          <div className="inline-flex items-center gap-2 bg-emerald-100 text-[#14532D] px-3 py-1 rounded-full text-xs font-bold mb-2.5">
             <BarChart3 className="w-3.5 h-3.5" />
             Real-Time Local Analytics
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0A3622]">
             Environmental Impact Dashboard
           </h1>
-          <p className="text-slate-600 mt-1.5 text-sm sm:text-base">
+          <p className="text-[#1E4730] mt-1.5 text-sm sm:text-base">
             Tracks your actual waste classifications, daily &amp; weekly trends, and confirmed responsible disposals.
           </p>
         </div>
 
         <Link
           to="/scanner"
-          className="inline-flex items-center justify-center gap-2 bg-emerald-900 hover:bg-emerald-950 text-white px-5 py-3 rounded-xl text-sm font-bold transition-colors shrink-0"
+          className="inline-flex items-center justify-center gap-2 bg-[#14532D] hover:bg-[#0F3F22] text-white px-5 py-3 rounded-xl text-sm font-bold transition-colors shrink-0"
         >
           <ScanLine className="w-4 h-4" />
           Scan More Waste
@@ -58,7 +58,7 @@ export default function DashboardPage() {
       <ActivityChart history={history} />
 
       {/* Our Environmental Impact Section */}
-      <section className="bg-gradient-to-br from-emerald-950 to-emerald-900 text-white rounded-3xl p-6 sm:p-8 shadow-lg space-y-6">
+      <section className="bg-gradient-to-br from-[#0B3521]/95 to-[#14532D]/95 backdrop-blur-md text-white rounded-3xl p-6 sm:p-8 shadow-lg space-y-6 border border-emerald-700/60">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-emerald-800 pb-5">
           <div>
             <h2 className="text-2xl font-extrabold text-white">Our Environmental Impact</h2>
@@ -138,7 +138,7 @@ export default function DashboardPage() {
 
       {/* Pending Disposal Quick Action Queue */}
       {pendingItems.length > 0 && (
-        <section className="bg-white rounded-2xl border border-emerald-100 p-6 shadow-xs space-y-4">
+        <section className="eco-glass rounded-2xl border border-emerald-200/80 p-6 shadow-xs space-y-4">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="font-bold text-slate-900">Awaiting Disposal Confirmation</h3>

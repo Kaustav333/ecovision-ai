@@ -16,20 +16,20 @@ export default function AboutPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6">
       {/* Header */}
-      <div className="text-center max-w-2xl mx-auto mb-4">
-        <div className="w-14 h-14 bg-emerald-100 border border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
-          <Info className="w-7 h-7 text-emerald-700" />
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 px-6 py-7 text-center max-w-2xl mx-auto mb-4 shadow-xs">
+        <div className="w-14 h-14 bg-emerald-100 border border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-3">
+          <Info className="w-7 h-7 text-[#14532D]" />
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0A3622]">
           About the Project
         </h1>
-        <p className="text-slate-600 mt-2 text-sm sm:text-base">
+        <p className="text-[#1E4730] mt-2 text-sm sm:text-base">
           Class 12 CBSE Artificial Intelligence Practical Project Documentation &amp; Architecture
         </p>
       </div>
 
       {/* Core Metadata + Problem Statement */}
-      <div className="bg-white rounded-3xl border border-emerald-100 p-6 sm:p-8 shadow-xs space-y-6">
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 p-6 sm:p-8 shadow-xs space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
             <p className="text-xs text-emerald-700 font-bold uppercase tracking-wider">
@@ -122,7 +122,7 @@ export default function AboutPage() {
       </div>
 
       {/* System Workflow */}
-      <div className="bg-white rounded-3xl border border-emerald-100 p-6 sm:p-8 shadow-xs">
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 p-6 sm:p-8 shadow-xs">
         <h2 className="font-bold text-slate-900 mb-5 text-lg">
           End-to-End AI Workflow (Viva Reference)
         </h2>
@@ -149,7 +149,7 @@ export default function AboutPage() {
       </div>
 
       {/* Sustainable Development Goals */}
-      <div className="bg-white rounded-3xl border border-emerald-100 p-6 sm:p-8 shadow-xs">
+      <div className="eco-glass rounded-3xl border border-emerald-200/80 p-6 sm:p-8 shadow-xs">
         <h2 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-lg">
           <Globe className="w-5 h-5 text-emerald-700" />
           Alignment with UN Sustainable Development Goals
@@ -181,7 +181,7 @@ export default function AboutPage() {
       </div>
 
       {/* Viva Key Highlights */}
-      <div className="bg-emerald-950 text-white rounded-3xl p-6 sm:p-8">
+      <div className="bg-[#0B3521]/92 backdrop-blur-md text-white rounded-3xl p-6 sm:p-8 border border-emerald-800/60">
         <h2 className="font-bold text-lg mb-4 flex items-center gap-2">
           <GraduationCap className="w-5 h-5 text-emerald-300" />
           CBSE AI Viva-Voce Highlights
@@ -203,7 +203,7 @@ export default function AboutPage() {
       </div>
 
       {/* References */}
-      <div className="bg-white border border-emerald-100 rounded-2xl p-6 text-center">
+      <div className="eco-glass border border-emerald-200/80 rounded-2xl p-6 text-center">
         <h3 className="font-bold text-slate-800 mb-3 text-sm">Official Documentation &amp; References</h3>
         <div className="flex flex-wrap items-center justify-center gap-3">
           {[

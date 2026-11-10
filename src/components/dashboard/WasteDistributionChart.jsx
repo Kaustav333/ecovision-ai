@@ -8,9 +8,9 @@ export default function WasteDistributionChart({ stats }) {
 
   if (data.length === 0) {
     return (
-      <div className="bg-white rounded-2xl border border-emerald-100 p-6 shadow-xs flex flex-col justify-center min-h-[340px]">
-        <h3 className="font-bold text-slate-900 mb-2">Waste Distribution (Pie Chart)</h3>
-        <p className="text-slate-400 text-sm text-center py-12">
+      <div className="eco-glass rounded-2xl border border-emerald-200/80 p-6 shadow-xs flex flex-col justify-center min-h-[340px]">
+        <h3 className="font-bold text-[#0A3622] mb-2">Waste Distribution (Pie Chart)</h3>
+        <p className="text-[#1E4730]/70 text-sm text-center py-12">
           No items classified yet. Scan waste items in the AI Scanner to view real distribution data.
         </p>
       </div>
@@ -18,10 +18,10 @@ export default function WasteDistributionChart({ stats }) {
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-emerald-100 p-6 shadow-xs">
+    <div className="eco-glass rounded-2xl border border-emerald-200/80 p-6 shadow-xs">
       <div className="mb-4">
-        <h3 className="font-bold text-slate-900">Waste Distribution</h3>
-        <p className="text-xs text-slate-500">Share of classified items by waste category</p>
+        <h3 className="font-bold text-[#0A3622]">Waste Distribution</h3>
+        <p className="text-xs text-[#1E4730]/80">Share of classified items by waste category</p>
       </div>
       <div className="h-72">
         <ResponsiveContainer width="100%" height="100%">
@@ -42,7 +42,7 @@ export default function WasteDistributionChart({ stats }) {
             </Pie>
             <Tooltip
               formatter={(value, name) => [`${value} item${value === 1 ? "" : "s"}`, name]}
-              contentStyle={{ borderRadius: "12px", border: "1px solid #D1FAE5" }}
+              contentStyle={{ borderRadius: "12px", border: "1px solid #A7F3D0" }}
             />
             <Legend />
           </PieChart>

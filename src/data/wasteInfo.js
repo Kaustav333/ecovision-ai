@@ -2,6 +2,8 @@
  * Waste Information & Smart Disposal Knowledge Base
  * =================================================
  * Maps each classified waste category to its recommended bin,
+ * color theme matching the EcoVision AI 4-bin palette
+ * (Plastic: Blue, Paper: Yellow, Metal: Red, Organic: Green),
  * step-by-step disposal instructions, recycling/reuse ideas,
  * and verified environmental benefits.
  */
@@ -9,10 +11,10 @@
 export const WASTE_CATEGORIES = ["Plastic", "Paper", "Metal", "Organic Waste"];
 
 export const CATEGORY_COLORS = {
-  Plastic: "#0284C7", // Sky blue
-  Paper: "#D97706", // Warm amber
-  Metal: "#475569", // Slate steel
-  "Organic Waste": "#16A34A", // Leaf green
+  Plastic: "#1D74C5", // Blue bin
+  Paper: "#EAB308", // Yellow bin
+  Metal: "#C2412D", // Terracotta red bin
+  "Organic Waste": "#228B3B", // Leaf green bin
 };
 
 /**
@@ -27,7 +29,14 @@ export function normalizeCategoryLabel(rawLabel) {
   if (cleaned === "paper" || cleaned.includes("paper") || cleaned.includes("cardboard")) {
     return "Paper";
   }
-  if (cleaned === "metal" || cleaned.includes("metal") || cleaned.includes("aluminium") || cleaned.includes("aluminum") || cleaned.includes("tin") || cleaned.includes("can")) {
+  if (
+    cleaned === "metal" ||
+    cleaned.includes("metal") ||
+    cleaned.includes("aluminium") ||
+    cleaned.includes("aluminum") ||
+    cleaned.includes("tin") ||
+    cleaned.includes("can")
+  ) {
     return "Metal";
   }
   if (
@@ -48,12 +57,12 @@ export function normalizeCategoryLabel(rawLabel) {
 const WASTE_INFO = {
   Plastic: {
     icon: "♻️",
-    color: "#0284C7",
-    bgColor: "#F0F9FF",
-    badgeClass: "bg-sky-100 text-sky-800 border-sky-200",
-    barClass: "bg-sky-600",
+    color: "#1D74C5",
+    bgColor: "#F0F8FF",
+    badgeClass: "bg-sky-100 text-sky-900 border-sky-300",
+    barClass: "bg-[#1D74C5]",
     barTrackClass: "bg-sky-100",
-    binType: "Dry Waste (Recyclable Stream)",
+    binType: "Dry Waste (Plastic Recyclables)",
     binColor: "Blue Bin",
     commonExamples: "Plastic bottles, food containers, milk jugs, clean packaging films",
     description:
@@ -63,7 +72,7 @@ const WASTE_INFO = {
       "Separate caps, pumps, or shrink-wrap sleeves if your local recycling facility requires it.",
       "Check the resin identification code (1–7) printed on the base.",
       "Flatten plastic bottles or containers to save bin and transport space.",
-      "Place in the Dry Waste / Blue Recyclable Bin or drop off at a plastic collection point.",
+      "Place in the Dry Waste / Blue Plastic Bin or drop off at a plastic collection point.",
     ],
     recyclingSuggestions: [
       "Clean PET bottles (Code 1) and HDPE containers (Code 2) are widely recycled into new packaging or textile fibres.",
@@ -80,13 +89,13 @@ const WASTE_INFO = {
   },
   Paper: {
     icon: "📄",
-    color: "#D97706",
-    bgColor: "#FFFBEB",
-    badgeClass: "bg-amber-100 text-amber-800 border-amber-200",
-    barClass: "bg-amber-500",
+    color: "#EAB308",
+    bgColor: "#FEFCE8",
+    badgeClass: "bg-amber-100 text-amber-900 border-amber-300",
+    barClass: "bg-[#EAB308]",
     barTrackClass: "bg-amber-100",
-    binType: "Dry Waste (Recyclable Stream)",
-    binColor: "Blue Bin",
+    binType: "Dry Waste (Paper Recyclables)",
+    binColor: "Yellow Bin",
     commonExamples: "Newspapers, notebooks, cardboard cartons, paper bags, envelopes",
     description:
       "Wood-pulp and cellulose materials that can be pulped and remanufactured into recycled paper products when kept clean and dry.",
@@ -95,7 +104,7 @@ const WASTE_INFO = {
       "Remove plastic tape, bubble wrap, metal spiral bindings, or heavy staples.",
       "Flatten cardboard boxes neatly before placing them in the bin.",
       "Keep soiled tissue or greasy pizza boxes out of dry paper recycling (compost clean uncoated scraps instead).",
-      "Place clean paper and flattened cartons in the Dry Waste / Blue Recyclable Bin.",
+      "Place clean paper and flattened cartons in the Yellow Paper Bin or dry recyclables stream.",
     ],
     recyclingSuggestions: [
       "Use both sides of notebook and printer paper before sending it for recycling.",
@@ -112,13 +121,13 @@ const WASTE_INFO = {
   },
   Metal: {
     icon: "🔩",
-    color: "#475569",
-    bgColor: "#F8FAFC",
-    badgeClass: "bg-slate-100 text-slate-800 border-slate-200",
-    barClass: "bg-slate-600",
-    barTrackClass: "bg-slate-200",
-    binType: "Dry Waste (Recyclable Stream)",
-    binColor: "Blue Bin",
+    color: "#C2412D",
+    bgColor: "#FEF2F2",
+    badgeClass: "bg-red-100 text-red-900 border-red-300",
+    barClass: "bg-[#C2412D]",
+    barTrackClass: "bg-red-100",
+    binType: "Dry Waste (Metal Recyclables)",
+    binColor: "Red Bin",
     commonExamples: "Aluminium beverage cans, tin food cans, clean foil, metal lids",
     description:
       "Ferrous and non-ferrous metals such as aluminium and steel that can be melted down and reformed repeatedly without losing structural quality.",
@@ -127,13 +136,13 @@ const WASTE_INFO = {
       "Check for sharp edges on opened tin lids and tuck them safely inside the can if needed.",
       "Remove loose paper labels when easy to do so.",
       "Roll clean aluminium foil into a compact ball (palm-sized) so sorting machines can detect it.",
-      "Place in the Dry Waste / Blue Recyclable Bin or hand over to a local scrap collector.",
+      "Place in the Red Metal Bin / dry recyclables stream or hand over to a local scrap collector.",
     ],
     recyclingSuggestions: [
       "Aluminium cans are infinitely recyclable and among the highest-value items in municipal recycling.",
       "Keep small metal bottle caps inside a steel can before pinching the top shut so tiny pieces aren't lost at sorting plants.",
       "Donate reusable stainless steel utensils or containers instead of throwing them away.",
-      "Bundle clean scrap metal items together for local kabadiwala / metal recovery centres.",
+      "Bundle clean scrap metal items together for local scrap / metal recovery centres.",
     ],
     environmentalBenefit:
       "Recovering and remelting recycled aluminium requires only a small fraction of the electricity needed to refine raw bauxite ore, sharply lowering mining impact and greenhouse gas emissions.",
@@ -144,10 +153,10 @@ const WASTE_INFO = {
   },
   "Organic Waste": {
     icon: "🌿",
-    color: "#16A34A",
+    color: "#228B3B",
     bgColor: "#F0FDF4",
-    badgeClass: "bg-emerald-100 text-emerald-800 border-emerald-200",
-    barClass: "bg-emerald-600",
+    badgeClass: "bg-emerald-100 text-emerald-900 border-emerald-300",
+    barClass: "bg-[#228B3B]",
     barTrackClass: "bg-emerald-100",
     binType: "Wet Waste (Biodegradable / Compost Bin)",
     binColor: "Green Bin",
